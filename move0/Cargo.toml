@@ -14,7 +14,7 @@ risc0-zkvm = { workspace = true, default-features = false, features = ["prove"] 
 move0-methods = { workspace = true }
 
 # patched version with fail = "0.5" that depends on getrandom = "2.0" which is compatible with risc0 guest
-move-vm-runtime = { path = "../move/language/move-vm/runtime", default-features = false }
-move-core-types = { path = "../move/language/move-core/types", default-features = false }
-move-vm-types = { path = "../move/language/move-vm/types", default-features = false }
-move-binary-format = { path = "../move/language/move-binary-format", default-features = false }
+move-vm-runtime = { git = "https://github.com/semenov-vladyslav/move", branch = "main-bump-fail-0.5", default-features = false }
+move-core-types = { git = "https://github.com/semenov-vladyslav/move", branch = "main-bump-fail-0.5", default-features = false }
+move-vm-types = { git = "https://github.com/semenov-vladyslav/move", branch = "main-bump-fail-0.5", default-features = false }
+move-binary-format = { git = "https://github.com/semenov-vladyslav/move", branch = "main-bump-fail-0.5", default-features = false }
