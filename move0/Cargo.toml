@@ -10,8 +10,7 @@ metal = ["risc0-zkvm/metal"]
 
 [dependencies]
 risc0-zkvm = { workspace = true, default-features = false, features = ["prove"] }
-# move0-methods = { path = "methods" }
-move0-methods = { workspace = true }
+move0-methods = { path = "methods" }
 
 # patched version with fail = "0.5" that depends on getrandom = "2.0" which is compatible with risc0 guest
 move-vm-runtime = { git = "https://github.com/semenov-vladyslav/move", branch = "main-bump-fail-0.5", default-features = false }
