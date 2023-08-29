@@ -1,0 +1,20 @@
+[package]
+name = "move0"
+version = "0.1.0"
+edition = { workspace = true }
+license = { workspace = true }
+
+[features]
+cuda = ["risc0-zkvm/cuda"]
+metal = ["risc0-zkvm/metal"]
+
+[dependencies]
+risc0-zkvm = { workspace = true, default-features = false, features = ["prove"] }
+# move0-methods = { path = "methods" }
+move0-methods = { workspace = true }
+
+# patched version with fail = "0.5" that depends on getrandom = "2.0" which is compatible with risc0 guest
+move-vm-runtime = { path = "../move/language/move-vm/runtime", default-features = false }
+move-core-types = { path = "../move/language/move-core/types", default-features = false }
+move-vm-types = { path = "../move/language/move-vm/types", default-features = false }
+move-binary-format = { path = "../move/language/move-binary-format", default-features = false }
