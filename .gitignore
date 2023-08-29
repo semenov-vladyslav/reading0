@@ -1,5 +1,4 @@
 target/
 risc0/
-move/
 Cargo.lock
 move0/methods/guest/Cargo.lock
